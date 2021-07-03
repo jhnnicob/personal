@@ -1,0 +1,23 @@
+.navbar {
+  color: var(--white);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul li {
+  list-style: none;
+  padding-left: 40px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navbar ul li a:hover {
+  color: var(--primary-color);
+}

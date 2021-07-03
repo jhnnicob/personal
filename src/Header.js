@@ -1,0 +1,13 @@
+import React from 'react';
+import './Header.css';
+import Navbar from './Navbar';
+
+export default function Header() {
+    return (
+        <div className="header">
+            <Navbar />
+            <h1>Hello I'm <span className="myName">Nico Molon</span></h1>
+            <p>Front-end Developer</p>
+        </div>
+    )
+}
