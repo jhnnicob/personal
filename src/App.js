@@ -68,6 +68,7 @@ function App() {
                 <div className="col">
                   <img src={project.imgSrc} />
                 </div>
+                <div></div>
               </div>
           ))}
         </div>
