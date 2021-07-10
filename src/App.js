@@ -70,7 +70,7 @@ function App() {
                 </div>
     
                 <div className="col">
-                  <img src={project.imgSrc} />
+                  <img src={project.imgSrc} alt=""/>
                 </div>
                 <div></div>
               </div>
