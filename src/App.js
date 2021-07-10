@@ -14,33 +14,37 @@ const projects = [
     gitRepo: "https://github.com/jhnnicob/netflix-clone",
     imgSrc: netflixImg
   },
-  {id: 2, 
+  {
+    id: 2, 
     title: "Job Options", 
     description: "Job Options is a Saas web app that you can easily search jobs.",
     websiteUrl: "https://inspiring-babbage-2528ed.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/job-options",
     imgSrc: jobOption
   },
-  {id: 3, 
+  {
+    id: 3, 
     title: "Star Coffee", 
     description: "Star coffe is a Starbacks clone. The only difference is the logo and color schemes.",
     websiteUrl: "https://serene-saha-71936e.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/star-coffee",
     imgSrc: starCoffee
   },
-  {id: 4, 
+  {
+    id: 4, 
     title: "Tic-tac-toe Game", 
     description: "Star coffe is a Starbacks clone. The only difference is the logo and color schemes.",
     websiteUrl: "https://jolly-sinoussi-cfd58a.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/tic-tac-toe",
     imgSrc: tictactoe
   },
-  {id: 4, 
+  {
+    id: 4, 
     title: "Spotify Clone", 
     description: "This spotify clone allows you to load your own spotify account(if you have one).",
     websiteUrl: "",
     gitRepo: "",
-    imgSrc: "",
+    imgSrc: ""
   }
 ]
 
