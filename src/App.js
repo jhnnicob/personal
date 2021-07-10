@@ -56,11 +56,12 @@ function App() {
         <h1>Projects</h1>
         <div className="project">
           { projects.map((project, index) => (
+            <>
+            <h2>{project.title}</h2>
              <div 
                 key={index} 
                 className="row">
                 <div className="col">
-                  <h2>{project.title}</h2>
                   <Tab />
                   <p>{project.description}</p>
                   <div className="buttons">
@@ -74,6 +75,7 @@ function App() {
                 </div>
                 <div></div>
               </div>
+            </>
           ))}
         </div>
       </div>
@@ -90,9 +92,9 @@ function Tab() {
   return (
       <div className="tab">
         <div className="tab__content">
-          <span>Web</span>
-          <span>{/**Tablet**/}</span>
-          <span>{/**Mobile**/}</span>
+          <span className="web">Web</span>
+          <span className="tablet">{/**Tablet**/}</span>
+          <span className="mobile">Mobile</span>
         </div>
 
         <div className="tab__icon">
