@@ -6,34 +6,34 @@ import starCoffee from './img/starcoffee.JPG';
 import tictactoe from './img/tic-tac-toe.JPG';
 
 const projects = [
-  {id: 1, 
+  {
+    id: 1, 
     title: "Netflix clone", 
     description: "Website looking like netflix that allows to view the preview from the youtube.",
     websiteUrl: "https://netflix-clone-bba0e.web.app/",
     gitRepo: "https://github.com/jhnnicob/netflix-clone",
-    imgSrc: netflixImg,
+    imgSrc: netflixImg
   },
   {id: 2, 
     title: "Job Options", 
     description: "Job Options is a Saas web app that you can easily search jobs.",
     websiteUrl: "https://inspiring-babbage-2528ed.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/job-options",
-    imgSrc: jobOption,
+    imgSrc: jobOption
   },
   {id: 3, 
     title: "Star Coffee", 
     description: "Star coffe is a Starbacks clone. The only difference is the logo and color schemes.",
     websiteUrl: "https://serene-saha-71936e.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/star-coffee",
-    imgSrc: starCoffee,
+    imgSrc: starCoffee
   },
-  ,
   {id: 4, 
     title: "Tic-tac-toe Game", 
     description: "Star coffe is a Starbacks clone. The only difference is the logo and color schemes.",
     websiteUrl: "https://jolly-sinoussi-cfd58a.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/tic-tac-toe",
-    imgSrc: tictactoe,
+    imgSrc: tictactoe
   },
   {id: 4, 
     title: "Spotify Clone", 
@@ -60,8 +60,8 @@ function App() {
                   <Tab />
                   <p>{project.description}</p>
                   <div className="buttons">
-                    <a href={project.websiteUrl} target="_blank">View Website</a>
-                    <a href={project.gitRepo} target="_blank">Visit Repo</a>
+                    <a href={project.websiteUrl} target="blank">View Website</a>
+                    <a href={project.gitRepo} target="blank">Visit Repo</a>
                   </div>
                 </div>
     
@@ -80,15 +80,6 @@ function App() {
   );
 }
 
-{/* <div className="card">
-  <h2>Job Option</h2>
-</div>
-<div className="card">
-  <h2>Spotify Clone</h2>
-</div>
-<div className="card">
-  <h2>Coffee Star</h2>
-</div> */}
 export default App;
 
 function Tab() {
