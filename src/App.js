@@ -9,42 +9,47 @@ const projects = [
   {
     id: 1, 
     title: "Netflix clone", 
-    description: "Website looking like netflix that allows to view the preview from the youtube.",
+    description: "Website looking like netflix that allows viewing the preview from youtube.",
     websiteUrl: "https://netflix-clone-bba0e.web.app/",
     gitRepo: "https://github.com/jhnnicob/netflix-clone",
-    imgSrc: netflixImg
+    imgSrc: netflixImg,
+    status: ""
   },
   {
     id: 2, 
     title: "Job Options", 
-    description: "Job Options is a Saas web app that you can easily search jobs.",
+    description: "Job Options is a Saas web app that you can easily search for jobs.",
     websiteUrl: "https://inspiring-babbage-2528ed.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/job-options",
-    imgSrc: jobOption
+    imgSrc: jobOption,
+    status: ""
   },
   {
     id: 3, 
     title: "Star Coffee", 
-    description: "Star coffe is a Starbacks clone. The only difference is the logo and color schemes.",
+    description: "Star coffee is a Starbucks clone. The only difference is the logo and color schemes.",
     websiteUrl: "https://serene-saha-71936e.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/star-coffee",
-    imgSrc: starCoffee
+    imgSrc: starCoffee,
+    status: ""
   },
   {
     id: 4, 
     title: "Tic-tac-toe Game", 
-    description: "Star coffe is a Starbacks clone. The only difference is the logo and color schemes.",
+    description: "Tic-tac-toe, noughts, and crosses, or Xs and Os/“X’y O’sies”, is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a diagonal, horizontal, or vertical row is the winner.",
     websiteUrl: "https://jolly-sinoussi-cfd58a.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/tic-tac-toe",
-    imgSrc: tictactoe
+    imgSrc: tictactoe,
+    status: ""
   },
   {
     id: 4, 
     title: "Spotify Clone", 
-    description: "This spotify clone allows you to load your own spotify account(if you have one).",
+    description: "This Spotify clone allows you to load your Spotify account(if you have one).",
     websiteUrl: "",
     gitRepo: "",
-    imgSrc: ""
+    imgSrc: "",
+    status: "Pending"
   }
 ]
 
@@ -57,11 +62,11 @@ function App() {
         <div className="project">
           { projects.map((project, index) => (
             <>
-            <h2>{project.title}</h2>
              <div 
                 key={index} 
                 className="row">
                 <div className="col">
+                  <h2>{project.title}<span className="status-text">{project.status}</span></h2>
                   <Tab />
                   <p>{project.description}</p>
                   <div className="buttons">
