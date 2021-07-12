@@ -61,7 +61,6 @@ function App() {
         <h1>Projects</h1>
         <div className="project">
           { projects.map((project, index) => (
-            <>
              <div 
                 key={index} 
                 className="row">
@@ -80,7 +79,6 @@ function App() {
                 </div>
                 <div></div>
               </div>
-            </>
           ))}
         </div>
       </div>
@@ -104,15 +102,15 @@ function Tab() {
 
         <div className="tab__icon">
           <div className="icons">
-            <span class="material-icons">
+            <span className="material-icons">
               computer
             </span>
             
-            <span class="material-icons">
+            <span className="material-icons">
               tablet_android
             </span>
 
-            <span class="material-icons">
+            <span className="material-icons">
               phone_iphone
             </span>
           </div>
