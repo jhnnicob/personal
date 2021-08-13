@@ -12,5 +12,10 @@
   .projects {
     display: flex;
     justify-content: center;
+    padding: 60px 0;
+  }
+
+  .projects__body > h2 {
+    font-size: 35px;
   }
 }
