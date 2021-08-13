@@ -1,80 +1,15 @@
 .app {
-}
-
-.project {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 25px;
-}
-
-.app__body {
-  padding: 80px 30px;
-}
-
-.app__body h1 {
-  text-align: center;
-}
-
-.project .row {
-  display: flex;
-  margin: 90px 0 90px 0;
-}
-
-.project .col {
-  flex: 1;
-}
-
-.left {
-  padding-left: 30px;
-}
-
-.project .col h4 {
-  margin-top: 10px;
-}
-
-.project .col {
-  flex: 1;
-}
-
-.project .col > img {
   width: 100%;
 }
 
-.project .col .buttons {
-  margin-top: 50px;
+.app__body {
+  width: 100%;
 }
 
-.project .col p {
-  margin-top: 20px;
-  margin-right: 100px;
-}
-
-.project .col .buttons a {
-  padding: 8px 18px;
-  border: 1px solid var(--secondary-color);
-  text-decoration: none;
-  margin-right: 10px;
-  border-radius: 20px;
-  font-weight: 500;
-  color: var(--secondary-color);
-  font-size: 12px;
-}
-
-.tab {
-  margin-top: 20px;
-}
-
-.tab__content span {
-  font-weight: bold;
-  margin-right: 15px;
-  font-size: 11px;
-  color: var(--secondary-color);
-}
-
-.tab__icon .icons .material-icons {
-  margin-top: 4px;
-  margin-right: 15px;
-  color: var(--secondary-color);
+.test-div {
+  background-color: rebeccapurple;
+  height: 100px;
+  color: aliceblue;
 }
 
 footer {
@@ -101,8 +36,8 @@ footer span {
   font-style: italic;
   color: #d9512c;
 }
-
-@media only screen and (max-width: 600px) {
+/* 
+@media only screen and (min-width: 600px) {
   .project {
     margin-top: 40px;
     padding: 0;
@@ -142,8 +77,4 @@ footer span {
   .header > h1 {
     font-size: 35px !important;
   }
-
-  .app__body {
-    padding: 40px 30px;
-  }
-}
+} */
