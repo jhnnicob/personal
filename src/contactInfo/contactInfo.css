@@ -1,0 +1,41 @@
+.contactInfo {
+  margin: 0 10px;
+}
+
+.contactInfo > h2 {
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+.contactInfo__body {
+  padding-top: 1px;
+}
+
+.contactInfo__item {
+  display: flex;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.contactInfo__detail {
+  margin-left: 20px;
+}
+
+.contactInfo__icon {
+  border: 1px solid var(--secondary-color);
+  border-radius: 30px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.contactInfo__icon > .MuiSvgIcon-root {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .contactForm {
+    flex-grow: 0.7;
+  }
+}
