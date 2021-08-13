@@ -7,6 +7,12 @@
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 body {
@@ -21,4 +27,49 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* For desktop: */
+.pfl-col-1 {
+  width: 8.33%;
+}
+.pfl-col-2 {
+  width: 16.66%;
+}
+.pfl-col-3 {
+  width: 25%;
+}
+.pfl-col-4 {
+  width: 33.33%;
+}
+.pfl-col-5 {
+  width: 41.66%;
+}
+.pfl-col-6 {
+  width: 50%;
+}
+.pfl-col-7 {
+  width: 58.33%;
+}
+.pfl-col-8 {
+  width: 66.66%;
+}
+.pfl-col-9 {
+  width: 75%;
+}
+.pfl-col-10 {
+  width: 83.33%;
+}
+.pfl-col-11 {
+  width: 91.66%;
+}
+.withFull {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For mobile phones: */
+  [class*="pfl-col-"] {
+    width: 100%;
+  }
 }
