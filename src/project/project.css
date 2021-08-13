@@ -1,0 +1,60 @@
+.project {
+  margin-top: 50px;
+  padding: 0 25px;
+}
+
+.project__row {
+  display: block;
+}
+
+.project__col {
+  flex: 1;
+}
+
+.left {
+  padding-left: 30px;
+}
+
+.project__col h4 {
+  margin-top: 10px;
+}
+
+.project__col > img {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.project__col .buttons {
+  margin-top: 30px;
+}
+
+.project__col p {
+  margin-top: 20px;
+}
+
+.project__col .buttons a {
+  padding: 8px 18px;
+  border: 1px solid var(--secondary-color);
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .project {
+    display: flex;
+    width: 1000px;
+    padding: 0;
+  }
+
+  .project__row {
+    display: flex;
+  }
+
+  .project__col {
+    margin-right: 50px;
+  }
+}
