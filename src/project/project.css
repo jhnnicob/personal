@@ -57,4 +57,9 @@
   .project__col {
     margin-right: 50px;
   }
+
+  .project__col > img {
+    margin-top: 0;
+    width: 100%;
+  }
 }
