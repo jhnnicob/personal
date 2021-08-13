@@ -4,6 +4,9 @@ import netflixImg from './img/netflix-clone.JPG';
 import jobOption from './img/job-option.JPG';
 import starCoffee from './img/starcoffee.JPG';
 import tictactoe from './img/tic-tac-toe.JPG';
+import Projects from './projects';
+import About from './about';
+import Contact from './contact';
 
 const projects = [
   {
@@ -41,15 +44,6 @@ const projects = [
     gitRepo: "https://github.com/jhnnicob/tic-tac-toe",
     imgSrc: tictactoe,
     status: ""
-  },
-  {
-    id: 4, 
-    title: "Spotify Clone", 
-    description: "This Spotify clone allows you to load your Spotify account(if you have one).",
-    websiteUrl: "",
-    gitRepo: "",
-    imgSrc: "",
-    status: "Pending"
   }
 ]
 
@@ -58,29 +52,9 @@ function App() {
     <div className="app">
       <Header />
       <div className="app__body">
-        <h1>Projects</h1>
-        <div className="project">
-          { projects.map((project, index) => (
-             <div 
-                key={index} 
-                className="row">
-                <div className="col">
-                  <h2>{project.title}<span className="status-text">{project.status}</span></h2>
-                  <Tab />
-                  <p>{project.description}</p>
-                  <div className="buttons">
-                    <a href={project.websiteUrl} target="blank">View Website</a>
-                    <a href={project.gitRepo} target="blank">Visit Repo</a>
-                  </div>
-                </div>
-    
-                <div className="col">
-                  <img src={project.imgSrc} alt=""/>
-                </div>
-                <div></div>
-              </div>
-          ))}
-        </div>
+        <About />
+        <Projects projects={projects}/>
+        <Contact />
       </div>
       <footer>
         <span>Nico Molon © — 2021</span>
@@ -90,31 +64,3 @@ function App() {
 }
 
 export default App;
-
-function Tab() {
-  return (
-      <div className="tab">
-        <div className="tab__content">
-          <span className="web">Web</span>
-          <span className="tablet">{/**Tablet**/}</span>
-          <span className="mobile">Mobile</span>
-        </div>
-
-        <div className="tab__icon">
-          <div className="icons">
-            <span className="material-icons">
-              computer
-            </span>
-            
-            <span className="material-icons">
-              tablet_android
-            </span>
-
-            <span className="material-icons">
-              phone_iphone
-            </span>
-          </div>
-        </div>
-      </div>
-  )
-}
