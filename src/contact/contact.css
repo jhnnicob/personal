@@ -1,0 +1,12 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact__body {
+    width: 1000px;
+    display: flex;
+  }
+}
