@@ -1,0 +1,29 @@
+.navList {
+  display: flex;
+}
+
+.navList > a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.navList > a:hover {
+  color: var(--primary-color);
+}
+
+.active {
+  color: var(--primary-color) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navList > a {
+    font-size: 16px;
+  }
+}
