@@ -1,0 +1,31 @@
+.contactForm {
+  flex-grow: 0.5;
+}
+
+.contactForm__control {
+  margin-top: 25px;
+}
+
+.contactForm__row:first-child > .MuiFormControl-root:first-child {
+  margin-right: 15px;
+}
+
+.contactForm__row:first-child > .MuiFormControl-root:last-child {
+  margin-left: 15px;
+}
+
+.contactForm__row {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.contactForm__button {
+  background-color: var(--black) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .contactForm {
+    flex-grow: 0.3;
+    margin-right: 50px;
+  }
+}
