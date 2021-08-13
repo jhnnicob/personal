@@ -1,23 +1,19 @@
 .navbar {
+  background-color: var(--black);
+  background-image: url("./img/stardust.png");
   color: var(--white);
+  z-index: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 30px 30px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
 }
 
-.navbar ul li {
-  list-style: none;
-  padding-left: 40px;
-}
-
-.navbar ul {
-  display: flex;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: var(--white);
-}
-
-.navbar ul li a:hover {
-  color: var(--primary-color);
+.navbar__black {
+  background-color: var(--black);
 }
