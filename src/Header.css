@@ -1,33 +1,37 @@
 .header {
+  margin-top: 70px;
+  padding: 50px 0;
   background-color: var(--black);
   background-image: url("./img/stardust.png");
   color: var(--white);
-  height: 45vh;
-  padding: 30px 30px 30px 30px;
 }
 
-.header > h1 {
+.header__body {
+  padding: 0 20px;
+}
+
+.header__body > h1 {
   text-align: center;
-  padding-top: 110px;
-  font-size: 50px;
+  font-size: 25px;
 }
 
-.header > h1 > .myName {
+.header__body > h1 > .myName {
   color: var(--primary-color);
 }
 
-.header > p {
+.header__body > p {
   text-align: center;
   margin-top: 10px;
   font-size: 21px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 768px) {
   .header {
-    height: 35vh;
+    padding: 120px 0;
   }
 
-  .header h1 {
-    padding-top: 80px;
+  .header__body > h1 {
+    text-align: center;
+    font-size: 45px;
   }
 }
