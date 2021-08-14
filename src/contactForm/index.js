@@ -2,47 +2,8 @@ import React, {useState, useReducer} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import './contactForm.css';
-
-const reducer = (state, action) => {
-    switch(action.type) {
-        case "field":
-            return {
-                ...state,
-                emailContent: {...state.emailContent, [action.name]: action.value}
-            }
-        case "send":
-            return {
-                ...state,
-                isLoading: true,
-            }
-        case "success":
-            return {
-                ...state,
-                successMessage: "Message sent",
-                isLoading: false,
-                emailContent: {
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                }
-            }
-        case "error":
-            return {
-                ...state,
-                error: "Somthing went wrong",
-                isLoading: false,
-                emailContent: {
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                }
-            }
-        default:
-            return state;
-    }
-}
+import Alert from '@material-ui/lab/Alert';
+import EmailReducer from '../reducer/EmailReducer';
 
 export default function ContactForm() {
 
@@ -58,7 +19,7 @@ export default function ContactForm() {
         }
     }
 
-    const [state, dispatch] = useReducer(reducer, initilaState);
+    const [state, dispatch] = useReducer(EmailReducer, initilaState);
     const {emailContent, isLoading, error, successMessage} = state;
 
     const handleSubmit = async (e) => {
@@ -89,11 +50,10 @@ export default function ContactForm() {
         });
     }
 
-    console.log(emailContent);
     return (
         <div className="contactForm">
             <form onSubmit={handleSubmit}>
-                <p>{successMessage}</p>
+                {successMessage && <Alert severity="success">{successMessage}</Alert>}
                 <h2>Leave a Message</h2>
                 <div className="contactForm__control">
                     <div className="contactForm__row">
