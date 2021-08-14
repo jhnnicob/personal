@@ -21,6 +21,8 @@
 
 .contactForm__button {
   background-color: var(--black) !important;
+  color: white !important;
+  max-width: 200px;
 }
 
 @media only screen and (min-width: 768px) {
