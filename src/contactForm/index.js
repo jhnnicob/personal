@@ -1,8 +1,9 @@
-import React, {useState, useReducer} from 'react';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import React, {useState, useReducer, useEffect} from 'react';
 import './contactForm.css';
 import Alert from '@material-ui/lab/Alert';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import Fade from '@material-ui/core/Fade'
 import EmailReducer from '../reducer/EmailReducer';
 
 export default function ContactForm() {
@@ -10,6 +11,7 @@ export default function ContactForm() {
     const initilaState = {
         isLoading: false,
         error: '',
+        success: false,
         successMessage: '',
         emailContent: {
             name: '',
@@ -20,7 +22,7 @@ export default function ContactForm() {
     }
 
     const [state, dispatch] = useReducer(EmailReducer, initilaState);
-    const {emailContent, isLoading, error, successMessage} = state;
+    const {emailContent, isLoading, error, successMessage, success} = state;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -50,10 +52,18 @@ export default function ContactForm() {
         });
     }
 
+    useEffect(() => {
+        setTimeout(() => {
+            dispatch({type: "close_alert"})
+        }, 3000)
+    }, [successMessage])
+
     return (
         <div className="contactForm">
             <form onSubmit={handleSubmit}>
-                {successMessage && <Alert severity="success">{successMessage}</Alert>}
+                {successMessage && <Fade in={successMessage != ""}>
+                    <Alert severity="success">{successMessage}</Alert>
+                </Fade>}
                 <h2>Leave a Message</h2>
                 <div className="contactForm__control">
                     <div className="contactForm__row">
