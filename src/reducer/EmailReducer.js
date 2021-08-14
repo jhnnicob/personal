@@ -13,6 +13,7 @@ const EmailReducer = (state, action) => {
         case "success":
             return {
                 ...state,
+                success: true,
                 successMessage: "Message sent",
                 isLoading: false,
                 emailContent: {
@@ -33,6 +34,11 @@ const EmailReducer = (state, action) => {
                     subject: '',
                     message: '',
                 }
+            }
+        case "close_alert":
+            return {
+                ...state,
+                successMessage: "",
             }
         default:
             return state;
