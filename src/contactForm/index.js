@@ -5,24 +5,32 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Fade from '@material-ui/core/Fade'
 import EmailReducer from '../reducer/EmailReducer';
+import {isEmail, isRequired} from '../validations';
 
 export default function ContactForm() {
 
     const initilaState = {
         isLoading: false,
-        error: '',
+        error: [],
         success: false,
         successMessage: '',
+        isCompleted: true,
         emailContent: {
             name: '',
             email: '',
             subject: '',
-            message: ''
+            message: '',
+        }, 
+        error: {
+            name: [],
+            email: [],
+            subject: [],
+            message: [],
         }
     }
 
     const [state, dispatch] = useReducer(EmailReducer, initilaState);
-    const {emailContent, isLoading, error, successMessage, success} = state;
+    const {emailContent, isLoading, successMessage, success, error, isCompleted} = state;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -52,12 +60,25 @@ export default function ContactForm() {
         });
     }
 
+    const validate = (e, validations) => {
+       dispatch({
+           type: "onblur_error",
+           validations: validations,
+           name: [e.target.name],
+           value: e.target.value
+       })
+    }
+
+    const setError = (errors) => {
+        return errors && errors.length > 0 ? true : false;
+    }
+
     useEffect(() => {
         setTimeout(() => {
             dispatch({type: "close_alert"})
         }, 3000)
     }, [successMessage])
-
+    // error && console.log(error.email);
     return (
         <div className="contactForm">
             <form onSubmit={handleSubmit}>
@@ -72,13 +93,19 @@ export default function ContactForm() {
                             name="name"
                             value={emailContent.name}
                             onChange={handleChange}
-                            fullWidth/>
+                            onBlur={(e) => validate(e, [isRequired])}
+                            fullWidth
+                            error={setError(error.name)}
+                            helperText={error.name}/>
                         <TextField 
                             label="Email" 
                             name="email"
                             value={emailContent.email}
                             onChange={handleChange}
-                            fullWidth/>
+                            onBlur={(e) => validate(e, [isRequired, isEmail])}
+                            fullWidth
+                            error={setError(error.email)}
+                            helperText={error.email}/>
                     </div>
                     <div className="contactForm__row">
                         <TextField 
@@ -86,7 +113,10 @@ export default function ContactForm() {
                             name="subject"
                             value={emailContent.subject}
                             onChange={handleChange}
-                            fullWidth/>
+                            onBlur={(e) => validate(e, [isRequired])}
+                            fullWidth
+                            error={setError(error.subject)}
+                            helperText={error.subject}/>
                     </div>
                     <div className="contactForm__row">
                         <TextField 
@@ -94,7 +124,10 @@ export default function ContactForm() {
                             name="message"
                             value={emailContent.message}
                             onChange={handleChange}
-                            fullWidth/>
+                            onBlur={(e) => validate(e, [isRequired])}
+                            fullWidth
+                            error={setError(error.message)}
+                            helperText={error.message}/>
                     </div>
                     <div className="contactForm__row">
                         <Button
@@ -102,7 +135,7 @@ export default function ContactForm() {
                             className="contactForm__button" 
                             variant="contained" 
                             color="primary"
-                            disabled={isLoading}>
+                            disabled={isCompleted}>
                             {isLoading ? "Loading..." : "Send a message"}
                         </Button>
                     </div>
