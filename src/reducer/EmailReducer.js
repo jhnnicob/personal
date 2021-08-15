@@ -23,17 +23,13 @@ const EmailReducer = (state, action) => {
                     message: '',
                 }
             }
-        case "error":
+        case "onblur_error":
+            let validations = action.validations;
             return {
                 ...state,
-                error: "Somthing went wrong",
-                isLoading: false,
-                emailContent: {
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                }
+                error: {...state.error, [action.name]: validations
+                    .map((errorFor) => errorFor(action.value))
+                    .filter((errorMsg) => errorMsg.length > 0)}
             }
         case "close_alert":
             return {
