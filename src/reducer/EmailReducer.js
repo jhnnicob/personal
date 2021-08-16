@@ -23,7 +23,7 @@ const EmailReducer = (state, action) => {
                     message: '',
                 }
             }
-        case "onblur_error":
+        case "validate":
             let validations = action.validations;
             return {
                 ...state,
