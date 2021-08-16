@@ -14,7 +14,7 @@ export default function ContactForm() {
         error: [],
         success: false,
         successMessage: '',
-        isCompleted: true,
+        isCompleted: false,
         emailContent: {
             name: '',
             email: '',
@@ -35,7 +35,7 @@ export default function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         dispatch({type: "send"}) ;
-
+    
         let response = await fetch("http://localhost:5000/contact", {
             method: "POST",
             headers: {
@@ -62,7 +62,7 @@ export default function ContactForm() {
 
     const validate = (e, validations) => {
        dispatch({
-           type: "onblur_error",
+           type: "validate",
            validations: validations,
            name: [e.target.name],
            value: e.target.value
@@ -78,10 +78,15 @@ export default function ContactForm() {
             dispatch({type: "close_alert"})
         }, 3000)
     }, [successMessage])
-    // error && console.log(error.email);
+
+    const setCompleted = () => {
+
+    }
+    
+    emailContent && console.log(emailContent);
     return (
         <div className="contactForm">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autoComplete="off">
                 {successMessage && <Fade in={successMessage != ""}>
                     <Alert severity="success">{successMessage}</Alert>
                 </Fade>}
@@ -132,10 +137,10 @@ export default function ContactForm() {
                     <div className="contactForm__row">
                         <Button
                             type="submit"
-                            className="contactForm__button" 
+                            className={`contactForm__button ${isLoading ? "disable" : ""}`}  
                             variant="contained" 
                             color="primary"
-                            disabled={isCompleted}>
+                            disabled={isLoading}>
                             {isLoading ? "Loading..." : "Send a message"}
                         </Button>
                     </div>
