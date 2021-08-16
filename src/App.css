@@ -12,20 +12,6 @@
   color: aliceblue;
 }
 
-footer {
-  background: var(--black);
-  background-image: url("./img/stardust.png");
-  display: flex;
-  justify-content: center;
-  padding: 80px 0 80px 0;
-}
-
-footer span {
-  text-align: center;
-  font-size: 14px;
-  color: var(--primary-color);
-}
-
 .mobile {
   display: none;
 }
@@ -36,45 +22,3 @@ footer span {
   font-style: italic;
   color: #d9512c;
 }
-/* 
-@media only screen and (min-width: 600px) {
-  .project {
-    margin-top: 40px;
-    padding: 0;
-  }
-
-  .project .row {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .col h2 {
-    margin-top: 30px;
-  }
-
-  .project .col p {
-    margin-right: 0;
-  }
-
-  .col img {
-    margin-top: 10px;
-  }
-
-  .web {
-    display: none;
-  }
-
-  .tablet {
-    display: none;
-  }
-
-  .mobile {
-    margin-left: 80px;
-    display: block;
-  }
-
-  .header > h1 {
-    font-size: 35px !important;
-  }
-} */
