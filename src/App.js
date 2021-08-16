@@ -7,6 +7,7 @@ import tictactoe from './img/tic-tac-toe.JPG';
 import Projects from './projects';
 import About from './about';
 import Contact from './contact';
+import Footer from './Footer';
 
 const projects = [
   {
@@ -56,9 +57,7 @@ function App() {
         <Projects projects={projects}/>
         <Contact />
       </div>
-      <footer>
-        <span>Nico Molon © — 2021</span>
-      </footer>
+      <Footer />
     </div>
   );
 }
