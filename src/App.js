@@ -18,7 +18,8 @@ const projects = [
     websiteUrl: "https://www.nicomolon.com/",
     gitRepo: "https://github.com/jhnnicob/portfolio",
     imgSrc: mywebsite,
-    status: ""
+    status: "",
+    technologies: ['react-original']
   },
   {
     id: 2, 
@@ -27,7 +28,8 @@ const projects = [
     websiteUrl: "https://inspiring-babbage-2528ed.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/job-options",
     imgSrc: jobOption,
-    status: ""
+    status: "",
+    technologies: ["html5-plain", "css3-plain", "javascript-plain"]
   },
   {
     id: 3, 
@@ -36,7 +38,8 @@ const projects = [
     websiteUrl: "https://serene-saha-71936e.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/star-coffee",
     imgSrc: starCoffee,
-    status: ""
+    status: "",
+    technologies: ["html5-plain", "css3-plain"]
   },
   {
     id: 4, 
@@ -45,7 +48,8 @@ const projects = [
     websiteUrl: "https://netflix-clone-bba0e.web.app/",
     gitRepo: "https://github.com/jhnnicob/netflix-clone",
     imgSrc: netflixImg,
-    status: ""
+    status: "",
+    technologies: ["react-original"]
   },
   {
     id: 5, 
@@ -54,7 +58,8 @@ const projects = [
     websiteUrl: "https://jolly-sinoussi-cfd58a.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/tic-tac-toe",
     imgSrc: tictactoe,
-    status: ""
+    status: "",
+    technologies: ["html5-plain", "css3-plain", "javascript-plain"]
   }
 ]
 
