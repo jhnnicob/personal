@@ -30,21 +30,21 @@ const projects = [
     status: ""
   },
   {
-    id: 1, 
-    title: "Netflix clone", 
-    description: "Website looking like netflix that allows viewing the preview from youtube.",
-    websiteUrl: "https://netflix-clone-bba0e.web.app/",
-    gitRepo: "https://github.com/jhnnicob/netflix-clone",
-    imgSrc: netflixImg,
-    status: ""
-  },
-  {
     id: 3, 
     title: "Star Coffee", 
     description: "Star coffee is a Starbucks clone. The only difference is the logo and color schemes.",
     websiteUrl: "https://serene-saha-71936e.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/star-coffee",
     imgSrc: starCoffee,
+    status: ""
+  },
+  {
+    id: 1, 
+    title: "Netflix clone", 
+    description: "Website looking like netflix that allows viewing the preview from youtube.",
+    websiteUrl: "https://netflix-clone-bba0e.web.app/",
+    gitRepo: "https://github.com/jhnnicob/netflix-clone",
+    imgSrc: netflixImg,
     status: ""
   },
   {
