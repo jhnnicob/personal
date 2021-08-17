@@ -6,11 +6,11 @@
 
 @media only screen and (min-width: 768px) {
   .contact__body {
-    width: 1000px;
+    width: 750px;
     display: flex;
   }
 
   .contact {
-    padding: 60px 0;
+    padding: 60px 30;
   }
 }
