@@ -1,6 +1,5 @@
 .project {
   margin-top: 50px;
-  padding: 0 25px;
 }
 
 .project__row {
@@ -46,16 +45,15 @@
 @media only screen and (min-width: 768px) {
   .project {
     display: flex;
-    width: 1000px;
-    padding: 0;
+    width: 100%;
   }
 
   .project__row {
     display: flex;
   }
 
-  .project__col {
-    margin-right: 50px;
+  .project__col:first-child {
+    padding-right: 30px;
   }
 
   .project__col > img {
