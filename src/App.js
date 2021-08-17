@@ -39,7 +39,7 @@ const projects = [
     status: ""
   },
   {
-    id: 1, 
+    id: 4, 
     title: "Netflix clone", 
     description: "Website looking like netflix that allows viewing the preview from youtube.",
     websiteUrl: "https://netflix-clone-bba0e.web.app/",
@@ -48,7 +48,7 @@ const projects = [
     status: ""
   },
   {
-    id: 4, 
+    id: 5, 
     title: "Tic-tac-toe Game", 
     description: "Tic-tac-toe, noughts, and crosses, or Xs and Os/“X’y O’sies”, is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a diagonal, horizontal, or vertical row is the winner.",
     websiteUrl: "https://jolly-sinoussi-cfd58a.netlify.app/",
