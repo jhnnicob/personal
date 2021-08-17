@@ -1,4 +1,4 @@
-import React, {useState, useReducer, useEffect} from 'react';
+import React, {useReducer, useEffect} from 'react';
 import './contactForm.css';
 import Alert from '@material-ui/lab/Alert';
 import TextField from '@material-ui/core/TextField';
@@ -11,10 +11,7 @@ export default function ContactForm() {
 
     const initilaState = {
         isLoading: false,
-        error: [],
-        success: false,
         successMessage: '',
-        isCompleted: false,
         emailContent: {
             name: '',
             email: '',
@@ -30,7 +27,7 @@ export default function ContactForm() {
     }
 
     const [state, dispatch] = useReducer(EmailReducer, initilaState);
-    const {emailContent, isLoading, successMessage, success, error, isCompleted} = state;
+    const {emailContent, isLoading, successMessage, error} = state;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -78,16 +75,11 @@ export default function ContactForm() {
             dispatch({type: "close_alert"})
         }, 3000)
     }, [successMessage])
-
-    const setCompleted = () => {
-
-    }
     
-    emailContent && console.log(emailContent);
     return (
         <div className="contactForm">
             <form onSubmit={handleSubmit} autoComplete="off">
-                {successMessage && <Fade in={successMessage != ""}>
+                {successMessage && <Fade in={successMessage !== ""}>
                     <Alert severity="success">{successMessage}</Alert>
                 </Fade>}
                 <h2>Leave a Message</h2>

@@ -2,7 +2,6 @@ import React from 'react';
 import './project.css';
 
 export default function Project({project}) {
-    project.technologies && project.technologies.map(technology => console.log(technology));
     return (
         <div className="project">
             <div className="project__row">
@@ -10,8 +9,8 @@ export default function Project({project}) {
                     <h3>{project.title}<span className="status-text">{project.status}</span></h3>
                     <div className="project__technology__icons">
                         {project.technologies && 
-                            project.technologies.map(technology => (
-                                <i className={`devicon-${technology} colored icon`}></i>
+                            project.technologies.map((technology, index) => (
+                                <i key={index} className={`devicon-${technology} colored icon`}></i>
                         ))}
                     </div>
                     <p>{project.description}</p>

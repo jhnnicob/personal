@@ -1,5 +1,5 @@
-import React,{useState, useEffect, history} from 'react';
-import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
+import React,{useEffect} from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import NavItem from './NavItem';
 
@@ -10,7 +10,7 @@ export default function Navbar() {
 
     useEffect(() => {
         window.addEventListener("scroll", () =>{
-            if(window.scrollY === 0  && window.scrollY < 338) {
+            if((window.scrollY === 0  && window.scrollY) < 338) {
                 history.push("");
             }else if(window.scrollY > 338 && window.scrollY < 619){
                 history.push("#about");
@@ -23,14 +23,14 @@ export default function Navbar() {
                 window.removeEventListener("scroll");
             }
         })
-    }, [])
+    }, [history])
 
     return (
         <nav className={"navbar"}>
-                <NavItem to="#home" active={location.hash == "#home" || location.hash == ""}>HOME</NavItem>
-                <NavItem to="#about" active={location.hash == "#about"}>ABOUT</NavItem>
-                <NavItem to="#projects" active={location.hash == "#projects"}>PROJECTS</NavItem>
-                <NavItem to="#contact" active={location.hash == "#contact"}>CONTACT</NavItem>
+                <NavItem to="#home" active={location.hash === "#home" || location.hash === ""}>HOME</NavItem>
+                <NavItem to="#about" active={location.hash === "#about"}>ABOUT</NavItem>
+                <NavItem to="#projects" active={location.hash === "#projects"}>PROJECTS</NavItem>
+                <NavItem to="#contact" active={location.hash === "#contact"}>CONTACT</NavItem>
         </nav>
     )
 }

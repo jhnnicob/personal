@@ -6,7 +6,7 @@ export default function About() {
         const yearBorn = 1992;
         const date = new Date();
         setAge(date.getFullYear() - yearBorn);
-    })
+    }, [])
     return (
         <div className="about" id="about">
             <div className="about__body">
