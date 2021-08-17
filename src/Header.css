@@ -8,10 +8,10 @@
 
 .header__body {
   padding: 0 20px;
+  text-align: center;
 }
 
 .header__body > h1 {
-  text-align: center;
   font-size: 25px;
 }
 
@@ -20,9 +20,20 @@
 }
 
 .header__body > p {
-  text-align: center;
   margin-top: 10px;
   font-size: 21px;
+}
+
+.header__body > a {
+  margin-top: 20px;
+  color: white;
+  border: 1px solid;
+  text-transform: capitalize;
+}
+
+.header__body > a:hover {
+  background: var(--black);
+  border: 1px solid white;
 }
 
 @media only screen and (min-width: 768px) {
