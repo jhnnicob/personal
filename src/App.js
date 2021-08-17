@@ -4,6 +4,7 @@ import netflixImg from './img/netflix-clone.JPG';
 import jobOption from './img/job-option.JPG';
 import starCoffee from './img/starcoffee.JPG';
 import tictactoe from './img/tic-tac-toe.JPG';
+import mywebsite from './img/mywebsite.JPG';
 import Projects from './projects';
 import About from './about';
 import Contact from './contact';
@@ -12,11 +13,11 @@ import Footer from './Footer';
 const projects = [
   {
     id: 1, 
-    title: "Netflix clone", 
-    description: "Website looking like netflix that allows viewing the preview from youtube.",
-    websiteUrl: "https://netflix-clone-bba0e.web.app/",
-    gitRepo: "https://github.com/jhnnicob/netflix-clone",
-    imgSrc: netflixImg,
+    title: "My Website", 
+    description: "A simple website I built to showcase my projects.",
+    websiteUrl: "https://www.nicomolon.com/",
+    gitRepo: "https://github.com/jhnnicob/portfolio",
+    imgSrc: mywebsite,
     status: ""
   },
   {
@@ -26,6 +27,15 @@ const projects = [
     websiteUrl: "https://inspiring-babbage-2528ed.netlify.app/",
     gitRepo: "https://github.com/jhnnicob/job-options",
     imgSrc: jobOption,
+    status: ""
+  },
+  {
+    id: 1, 
+    title: "Netflix clone", 
+    description: "Website looking like netflix that allows viewing the preview from youtube.",
+    websiteUrl: "https://netflix-clone-bba0e.web.app/",
+    gitRepo: "https://github.com/jhnnicob/netflix-clone",
+    imgSrc: netflixImg,
     status: ""
   },
   {
