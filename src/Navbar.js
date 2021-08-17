@@ -10,7 +10,7 @@ export default function Navbar() {
 
     useEffect(() => {
         window.addEventListener("scroll", () =>{
-            if((window.scrollY === 0  && window.scrollY) < 338) {
+            if(window.scrollY === 0  && window.scrollY < 338) {
                 history.push("");
             }else if(window.scrollY > 338 && window.scrollY < 619){
                 history.push("#about");
